@@ -54,7 +54,7 @@ export default {
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      TeamMembers: {name: '', lastName: '', email: '', password: '', curp: '', skills: '', rol: '', rfc: ''}
+      TeamMembers: {name: '', lastName: '', curp: '', rfc: '', skills: '', rol: '', password: '', email: ''}
     }
   },
   methods: {
@@ -71,7 +71,7 @@ export default {
       }
       console.log(newTeamMember)
       console.log(newTeamMember.rol)
-      axios.post('http://localhost:3000/teamMembers', newTeamMember).then((response) => { console.log(response) }).catch((error) => { console.log(error) })
+      axios.post('http://localhost:3000/TeamMembers', newTeamMember).then((response) => { console.log(response) }).catch((error) => { console.log(`Si llega aqui ${error}`) })
     }
   }
 }
