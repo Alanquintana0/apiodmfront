@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import inicio from '@/components/inicio'
+import createProyect from '@/components/createProyect'
 
 Vue.use(Router)
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/inicio',
       name: inicio,
       component: inicio
+    },
+    {
+      path: '/crearProyecto',
+      name: createProyect,
+      component: createProyect
     }
   ]
 })
