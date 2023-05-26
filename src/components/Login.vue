@@ -34,12 +34,12 @@ export default {
   <div class="container">
     <h4>Iniciar sesion</h4>
     <div class="class-group">
-      <label class="pull-left">E-mail</label>
-      <input type="text" class="form-control" placeholder="introduzca e-mail" v-model="TeamMembers.email">
+      <label class="pull-left">Introduce tu E-mail:</label>
+      <input type="text" class="form-control" v-model="TeamMembers.email" required>
     </div>
     <div class="class-group">
-      <label class="pull-left">Contrasena</label>
-      <input type="password" class="form-control" placeholder="introduzca contrasena" v-model="TeamMembers.password">
+      <label class="pull-left">Introduce tu Contraseña:</label>
+      <input type="password" class="form-control" v-model="TeamMembers.password" required>
     </div>
     <button class="btn btn-large btn-block btn-success btn-primary full-width" @click="inicioSesion()">Iniciar sesion</button>
     <router-link to="/registro">

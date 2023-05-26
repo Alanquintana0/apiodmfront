@@ -3,28 +3,29 @@
     <form action="">
       <h4>Registro</h4>
       <div class="class-group">
-        <label class="pull-left">Nombre</label>
-        <input type="text" class="form-control" placeholder="introduzca Nombre" v-model="TeamMembers.name">
+        <label class="pull-left">Introduce tu Nombre:</label>
+        <input type="text" class="form-control" v-model="TeamMembers.name" required>
       </div>
       <div class="class-group">
-        <label class="pull-left">Apellido</label>
-        <input type="text" class="form-control" placeholder="introduzca Apellido" v-model="TeamMembers.lastName">
+        <label class="pull-left">Introduce tu Apellido:</label>
+        <input type="text" class="form-control" v-model="TeamMembers.lastName" required>
       </div>
       <div class="class-group">
-        <label class="pull-left">E-mail</label>
-        <input type="text" class="form-control" placeholder="introduzca Email" v-model="TeamMembers.email">
+        <label class="pull-left">introduce tu Correo:</label>
+        <input type="email" class="form-control" v-model="TeamMembers.email" required>
       </div>
       <div class="class-group">
-        <label class="pull-left">Password</label>
-        <input type="password" class="form-control" placeholder="introduzca Password" v-model="TeamMembers.password">
+        <label class="pull-left">Introduce tu Contraseña:</label>
+        <input type="password" class="form-control" v-model="TeamMembers.password" required>
       </div>
       <div class="class-group">
-        <label class="pull-left">Curp</label>
-        <input type="text" class="form-control" placeholder="introduzca Curp" v-model="TeamMembers.curp">
+        <label class="pull-left">Introduce tu Curp:</label>
+        <input type="text" class="form-control" v-model="TeamMembers.curp" required>
       </div>
       <div class="class-group">
         <label class="pull-left">Nivel</label>
-        <select class="form-control" v-model="TeamMembers.skills">
+        <select class="form-control" v-model="TeamMembers.skills" required>
+          <option value="">(Selecciona una opcion)</option>
           <option value="Junior">Junior</option>
           <option value="Senior">Senior</option>
           <option value="Master">Master</option>
@@ -32,15 +33,16 @@
       </div>
       <div class="class-group">
         <label class="pull-left">Rol</label>
-        <select class="form-control" v-model="TeamMembers.rol">
+        <select class="form-control" v-model="TeamMembers.rol" required>
+          <option value="">(Selecciona una opcion)</option>
           <option value="ScrumMaster">ScrumMaster</option>
           <option value="ProductOwner">ProductOwner</option>
           <option value="Developer">Developer</option>
         </select>
       </div>
       <div class="class-group">
-        <label class="pull-left">RFC</label>
-        <input type="text" class="form-control" placeholder="introduzca RFC" v-model="TeamMembers.rfc">
+        <label class="pull-left">introduce tu RFC:</label>
+        <input type="text" class="form-control" v-model="TeamMembers.rfc" required>
       </div>
       <button class="btn btn-large btn-block btn-success full-width" @click="addToApi()">Registrate</button>
     </form>
@@ -93,4 +95,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>
