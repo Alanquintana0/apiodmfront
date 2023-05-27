@@ -22,12 +22,12 @@ export default new Router({
     },
     {
       path: '/inicio',
-      name: inicio,
+      name: 'inicio',
       component: inicio
     },
     {
       path: '/crearProyecto',
-      name: createProyect,
+      name: 'createProyect',
       component: createProyect
     },
     {
