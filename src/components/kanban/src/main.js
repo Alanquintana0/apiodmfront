@@ -1,17 +1,13 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
-import router from './router'
-import vueKanban from 'vue-kanban'
+import Vue from 'vue';
+import App from '../kanban/App.Kanban';
 
-Vue.config.productionTip = false
-Vue.use(vueKanban)
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  router,
+  template: '<App.Kanban/>',
   components: { App },
-  template: '<App/>'
-})
+});

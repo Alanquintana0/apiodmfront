@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import inicio from '@/components/inicio'
 import createProyect from '@/components/createProyect'
+import Kanban from '@/components/kanban/src/components/Kanban'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/crearProyecto',
       name: createProyect,
       component: createProyect
+    },
+    {
+      path: '/kanban',
+      name: Kanban,
+      component: Kanban
     }
   ]
 })
