@@ -10,8 +10,9 @@ export default {
   mounted () {
     axios.get('http://localhost:3000/proyectRecords')
       .then((response) => {
-        console.log(response.data)
-        this.ProyectRecords = response.data
+        console.log(`Responde con estos datos ${response.data.obj}`)
+        console.log(response.data.obj)
+        this.ProyectRecords = response.data.obj
       }).catch((error) => {
         console.log(error)
       })
@@ -24,7 +25,7 @@ export default {
     <router-link to="/crearProyecto">
       <button class="btn btn-large btn-block btn-success full-width">Crear proyecto</button>
     </router-link>
-    <table class="table-striped table-bordered">
+    <table class="table-striped table-bordered pull-center">
       <thead>
         <tr>
           <th>ID</th>
@@ -34,9 +35,9 @@ export default {
       </thead>
       <tbody>
         <tr v-for="proyectRecord_alias in ProyectRecords" :key="proyectRecord_alias.id">
-          <td> {{ proyectRecord_alias.id }} </td>
-          <td> {{ proyectRecord_alias.DevelopmentTeam }} </td>
-          <td> {{ proyectRecord_alias.description }} </td>
+          <td> {{ proyectRecord_alias._id }} </td>
+          <td> {{ proyectRecord_alias._DevelopmentTeam }} </td>
+          <td> {{ proyectRecord_alias._description }} </td>
         </tr>
       </tbody>
     </table>
