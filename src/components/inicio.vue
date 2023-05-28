@@ -8,7 +8,7 @@ export default {
     }
   },
   mounted () {
-    axios.get('http://localhost:3000/proyectRecords')
+    axios.get('https://api1-a329927.b4a.run/proyectRecords')
       .then((response) => {
         console.log(`Responde con estos datos ${response.data.obj}`)
         console.log(response.data.obj)

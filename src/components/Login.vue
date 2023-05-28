@@ -17,7 +17,7 @@ export default {
       if (newTeamMember.email !== '' && newTeamMember.password !== '') {
         console.log(newTeamMember)
         console.log(newTeamMember.rol)
-        axios.post('http://localhost:3000/login', newTeamMember)
+        axios.post('https://api1-a329927.b4a.run/login', newTeamMember)
           .then((response) => {
             this.$router.push('/inicio')
             console.log(response)

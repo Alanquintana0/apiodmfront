@@ -56,7 +56,7 @@ export default {
         status: this.ProyectRecords.status
       }
       console.log(newProyect)
-      axios.post('http://localhost:3000/proyectRecords', newProyect).then((response) => { console.log(response) }).catch((error) => { console.log(`Si llega aqui ${error}`) })
+      axios.post('https://api1-a329927.b4a.run/proyectRecords', newProyect).then((response) => { console.log(response) }).catch((error) => { console.log(`Si llega aqui ${error}`) })
     }
   }
 }
