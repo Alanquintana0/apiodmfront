@@ -3,7 +3,7 @@
     <h4>Crea un proyecto</h4>
     <div class="class-group">
       <label for="">Nombre del proyecto</label>
-      <input type="text" class="form-control" placeholder="Nombre del proyecto" v-model="ProyectRecords.projectName">
+      <input type="text" class="form-control" placeholder="Nombre del proyecto" v-model="ProyectRecords.Name">
     </div>
     <div class="class-group">
       <label for="">Fecha de orden</label>
@@ -46,14 +46,14 @@ export default {
   name: 'createProyect',
   data () {
     return {
-      ProyectRecords: {projectName: '', requestDate: '', startDate: '', projectManagerId: '', productOwnerId: '', developmentTeam: [], description: '', status: true},
+      ProyectRecords: {Name: '', requestDate: '', startDate: '', projectManagerId: '', productOwnerId: '', developmentTeam: [], description: '', status: true},
       team:[]
     }
   },
   methods: {
     addToApi () {
       let newProyect = {
-        projectName: this.ProyectRecords.projectName,
+        Name: this.ProyectRecords.Name,
         requestDate: this.ProyectRecords.requestDate,
         startDate: this.ProyectRecords.startDate,
         projectManagerId: this.ProyectRecords.projectManagerId,
