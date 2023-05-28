@@ -17,6 +17,8 @@ export default{
         benefit: this.UserHistory.benefit,
         priority: this.UserHistory.priority,
         size: this.UserHistory.size,
+        event: this.UserHistory.event,
+        result: this.UserHistory.result,
         status: this.UserHistory.status,
         column: this.UserHistory.column
       }
