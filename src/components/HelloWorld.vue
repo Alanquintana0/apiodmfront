@@ -73,7 +73,7 @@ export default {
       }
       console.log(newTeamMember)
       console.log(newTeamMember.rol)
-      axios.post('http://localhost:3000/TeamMembers', newTeamMember).then((response) => { console.log(response) }).catch((error) => { console.log(`Si llega aqui ${error}`) })
+      axios.post('https://api1-a329927.b4a.run/teamMembers', newTeamMember).then((response) => { console.log(response) }).catch((error) => { console.log(`Si llega aqui ${error}`) })
     }
   }
 }
