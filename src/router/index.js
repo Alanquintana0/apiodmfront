@@ -5,6 +5,7 @@ import Login from '@/components/Login'
 import inicio from '@/components/inicio'
 import createProyect from '@/components/createProyect'
 import createUserHistory from '@/components/createUserHistory'
+import ColumComponent from '@/components/ColumComponent'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/crearUserHistory',
       name: 'crearUserHistory',
       component: createUserHistory
+    },
+    {
+      path: '/crearColumna',
+      name: 'createColumn',
+      component: ColumComponent
     }
   ]
 })
