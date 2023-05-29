@@ -1,4 +1,5 @@
 <script>
+/* eslint-disable */
 import axios from 'axios'
 export default {
   name: 'inicio',
@@ -31,16 +32,19 @@ export default {
     <table class="table-striped table-bordered pull-center">
       <thead>
         <tr>
-          <th>ID</th>
+          <th>Nombre del Proyecto</th>
           <th>Descripcion</th>
-          <th>Equipo de desarrollo</th>
+          <th>Proyect Manager</th>
+          <th>Product Owner</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="proyectRecord_alias in ProyectRecords" :key="proyectRecord_alias.id">
-          <td> {{ proyectRecord_alias._id }} </td>
-          <td> {{ proyectRecord_alias._DevelopmentTeam }} </td>
+
+          <td> {{ proyectRecord_alias._Name }}</td>
           <td> {{ proyectRecord_alias._description }} </td>
+          <td> {{ proyectRecord_alias._projectManager._name }} {{ proyectRecord_alias._projectManager._lastName}}</td>
+          <td> {{ proyectRecord_alias._productOwner._name }} {{ proyectRecord_alias._productOwner._lastName }}</td>
         </tr>
       </tbody>
     </table>
