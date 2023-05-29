@@ -26,6 +26,9 @@ Overall, this project combines the power of Node.js, Express, JavaScript, and Vu
 
 For support, email a329927@uach.mx
 
+## Links
+- Servidor: https://api1-a329927.b4a.run/
+- Front Desplegado: https://scrum-api-odm.netlify.app
 
 ## Run Locally
 
