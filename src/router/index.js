@@ -30,8 +30,7 @@ export default new Router({
       name: 'createProyect',
       component: createProyect
     },
-    {
-      path: '/backlog',
+    { path: '/backlog',
       name: 'backlog',
       component: backlog
     }

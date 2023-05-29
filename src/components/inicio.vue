@@ -25,6 +25,9 @@ export default {
     <router-link to="/crearProyecto">
       <button class="btn btn-large btn-block btn-success full-width">Crear proyecto</button>
     </router-link>
+    <router-link to="/crearUserHistory">
+      <button class="btn btn-large btn-block btn-success full-width">Crear userHistory</button>
+    </router-link>
     <table class="table-striped table-bordered pull-center">
       <thead>
         <tr>
