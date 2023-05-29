@@ -1,8 +1,9 @@
 # odmfront
 
 > A Vue.js project
-> Back4app: https://api1-a329927.b4a.run/
-> GitHub repository: https://github.com/Alanquintana0/apiodmfront.git
+
+- Back4app: https://api1-a329927.b4a.run/
+- GitHub repository: https://github.com/Alanquintana0/apiodmfront.git
 
 This is the front-end project that will connect to our back-end project, creating an AGILE methodology project manager. It will feature functionalities such as user login, registration, task boards, and task creation, among others. This project serves as the final part of our Web Platforms course.
 
