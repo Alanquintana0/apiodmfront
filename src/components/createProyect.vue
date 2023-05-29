@@ -15,15 +15,30 @@
     </div>
     <div class="class-group">
       <label for="">Manager del proyecto</label>
-      <input type="text" class="form-control" placeholder="Product manager" v-model="ProyectRecords.projectManagerId">
+        <select v-model="ProyectRecords.projectManagerId" class="form-control">
+          <option disabled value="">Please select one</option>
+          <option v-for="person in people" :key="person._id" :value="person._id">
+            {{ person._name }}
+          </option>
+        </select>
     </div>
     <div class="class-group">
       <label for="">Owner del proyecto</label>
-      <input type="text" class="form-control" placeholder="Product Owner" v-model="ProyectRecords.productOwnerId">
+      <select class="form-control" placeholder="Product Owner" v-model="ProyectRecords.productOwnerId">
+        <option disabled value="">Please select one</option>
+          <option v-for="person in people" :key="person._id" :value="person._id">
+            {{ person._name }}
+          </option>
+      </select>
     </div>
     <div class="class-group">
       <label for="">Equipo de desarrollo</label>
-      <input type="text" class="form-control" placeholder="Equipo que trabajara en el proyecto" v-model="ProyectRecords.developmentTeam">
+      <select class="form-control" placeholder="Equipo que trabajara en el proyecto" v-model="ProyectRecords.developmentTeam">
+        <option disabled value="">Please select</option>
+          <option v-for="person in people" :key="person._id" :value="person._id">
+            {{ person._name }}
+          </option>
+      </select>
     </div>
     <div class="class-group">
       <label for="">Descripcion</label>
@@ -47,7 +62,7 @@ export default {
   data () {
     return {
       ProyectRecords: {Name: '', requestDate: '', startDate: '', projectManagerId: '', productOwnerId: '', developmentTeam: [], description: '', status: true},
-      team:[]
+      people:[]
     }
   },
   methods: {
@@ -67,9 +82,9 @@ export default {
     }
   },
   created () {
-    axios.get('https://api1-a329927.b4a.run/teamMember')
+    axios.get('https://api1-a329927.b4a.run/teamMembers')
              .then(response => {
-                this.team = response.data.obj;
+                this.people = response.data.obj;
              }).catch(err => {
                 console.log(err);
              })
